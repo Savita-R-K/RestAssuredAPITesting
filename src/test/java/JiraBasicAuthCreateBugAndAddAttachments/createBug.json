@@ -1,0 +1,11 @@
+{
+  "fields": {
+    "project": {
+      "key": "SCRUM"
+    },
+    "summary": "url not working",
+    "issuetype": {
+      "name": "Bug"
+    }
+  }
+}
