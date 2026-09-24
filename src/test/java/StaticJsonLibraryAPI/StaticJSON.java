@@ -15,7 +15,7 @@ public class StaticJSON {
     @Test
     public void addBook() {
         RestAssured.baseURI = "http://216.10.245.166";
-        File jsonFile = new File(System.getProperty("user.dir") + "src/test/java/StaticJsonLibraryAPI/addBook.json");
+        File jsonFile = new File(System.getProperty("user.dir") + "/src/test/java/StaticJsonLibraryAPI/addBook.json");
         Response response = given().log().all()
                 .header("Content-Type", "application/json")
                 .body(jsonFile)

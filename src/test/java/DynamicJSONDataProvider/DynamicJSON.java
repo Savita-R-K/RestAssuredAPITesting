@@ -32,6 +32,12 @@ public class DynamicJSON {
         JsonPath js = ReusableMethods.rawToJson(response);
         String id = js.getString("ID");
         System.out.println(id);
+        //deleting books
+        given().body("{\n" +
+                        "\"ID\":\""+ isbn+aisle +"\"\n" +
+                        "}")
+                .when().post("/Library/DeleteBook.php")
+                .then().log().all().assertThat().statusCode(200).extract().response();
     }
 
     @DataProvider(name = "BooksData")
